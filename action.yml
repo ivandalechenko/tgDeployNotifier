@@ -1,0 +1,15 @@
+name: 'Telegram Notification'
+description: 'Send deployment status notifications to Telegram'
+inputs:
+  token:
+    description: 'Telegram bot token'
+    required: true
+  chatId:
+    description: 'Telegram chat id'
+    required: true
+  status:
+    description: 'Deployment status (success or failure)'
+    required: false
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
